@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Accessible Student Study Dashboard"
+    >
+
+    <title>Student Study Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <h1>Student Study Dashboard</h1>
+            <p>Manage your study tasks and progress</p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- PAGE LAYOUT -->
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside aria-label="Sidebar">
+
+            <h2>Quick Links</h2>
+
+            <nav aria-label="Sidebar navigation">
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#tasks">My Tasks</a></li>
+                    <li><a href="#progress">My Progress</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <h2>Study Tip</h2>
+                <p>
+                    Take short breaks while studying to stay focused.
+                </p>
+            </section>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main id="dashboard">
+
+            <!-- INTRODUCTION -->
+            <section aria-labelledby="dashboard-title">
+
+                <h2 id="dashboard-title">
+                    Welcome to Your Study Dashboard
+                </h2>
+
+                <p>
+                    Use this dashboard to organize your daily study tasks.
+                </p>
+
+            </section>
+
+
+            <!-- TASK FORM -->
+            <section id="tasks" aria-labelledby="task-form-title">
+
+                <h2 id="task-form-title">Add Study Task</h2>
+
+                <form id="taskForm">
+
+                    <fieldset>
+
+                        <legend>Study Task Information</legend>
+
+                        <div>
+                            <label for="taskName">
+                                Task Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="taskName"
+                                name="taskName"
+                                placeholder="Enter task name"
+                                required
+                                                    >
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <select
+                                id="subject"
+                                name="subject"
+                                required
+                            
+                            >
+                                <option value="">
+                                    Select Subject
+                                </option>
+
+                                <option value="HTML">
+                                    HTML
+                                </option>
+
+                                <option value="CSS">
+                                    CSS
+                                </option>
+
+                                <option value="JavaScript">
+                                    JavaScript
+                                </option>
+
+                                <option value="Database">
+                                    Database
+                                </option>
+                            </select>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="taskDate">
+                                Study Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="taskDate"
+                                name="taskDate"
+                                required
+                            
+                            >
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="priority">
+                                Priority
+                            </label>
+
+                            <select
+                                id="priority"
+                                name="priority"
+                                required
+                            >
+                                <option value="">
+                                    Select Priority
+                                </option>
+
+                                <option value="low">
+                                    Low
+                                </option>
+
+                                <option value="medium">
+                                    Medium
+                                </option>
+
+                                <option value="high">
+                                    High
+                                </option>
+                            </select>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="description">
+                                Task Description
+                            </label>
+
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="4"
+                                placeholder="Describe your study task"
+                                aria-label="Study task description"
+                            ></textarea>
+                        </div>
+
+                        <br>
+
+                        <button type="submit">
+                            Add Task
+                        </button>
+
+                        <button
+                            type="reset"
+                            aria-label="Clear study task form"
+                        >
+                            Clear
+                        </button>
+
+                    </fieldset>
+
+                </form>
+
+            </section>
+
+
+            <!-- ARTICLE -->
+            <article id="about">
+
+                <h2>Study Planning</h2>
+
+                <p>
+                    A good study plan helps students manage their
+                    time and complete important tasks.
+                </p>
+
+            </article>
+
+
+            <!-- TASK TABLE -->
+            <section id="progress" aria-labelledby="progress-title">
+
+                <h2 id="progress-title">Study Progress</h2>
+
+                <table>
+
+                    <caption>
+                        Current Study Tasks
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Task</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Priority</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>HTML Practice</td>
+                            <td>HTML</td>
+                            <td>20 September 2026</td>
+                            <td>High</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>CSS Layout</td>
+                            <td>CSS</td>
+                            <td>21 September 2026</td>
+                            <td>Medium</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>JavaScript Basics</td>
+                            <td>JavaScript</td>
+                            <td>22 September 2026</td>
+                            <td>Low</td>
+                            <td>Pending</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <!-- MODAL -->
+            <section aria-labelledby="modal-title">
+
+                <h2 id="modal-title">Study Reminder</h2>
+
+                <button
+                    type="button"
+                    id="openModal"
+                    aria-haspopup="dialog"
+                    aria-controls="studyModal"
+                >
+                    Open Reminder
+                </button>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- MODAL DIALOG -->
+    <dialog
+        id="studyModal"
+        aria-labelledby="dialogTitle"
+    >
+
+        <h2 id="dialogTitle">
+            Study Reminder
+        </h2>
+
+        <p>
+            Remember to complete your study tasks today.
+        </p>
+
+        <button
+            type="button"
+            id="closeModal"
+        >
+            Close
+        </button>
+
+    </dialog>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Student Study Dashboard.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
